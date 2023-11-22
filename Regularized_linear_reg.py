@@ -23,6 +23,11 @@ def compute_cost_linear_reg(X, y, w, b, lambda_ = 1):
     cost = cost / (2 * m)                                              #scalar  
  
     reg_cost = 0
+
+    """
+    此处正则化
+    """
+
     for j in range(n):
         reg_cost += (w[j]**2)                                          #scalar
     reg_cost = (lambda_/(2*m)) * reg_cost                              #scalar
